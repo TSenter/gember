@@ -20,4 +20,4 @@ export type GeneratorFile = {
   root: string;
 };
 
-export type GeneratorName = "component" | "helper" | "modifier" | "service";
+export type GeneratorName = "component" | "helper" | "modifier" | "service" | "component-test";

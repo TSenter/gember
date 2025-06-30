@@ -22,6 +22,7 @@ export async function generate({
   packagePath,
   targetDir,
   templateFilename,
+  includeTest,
 }: {
   customTargetPath?: string;
   entityName: string;
@@ -30,6 +31,7 @@ export async function generate({
   packagePath: string;
   targetDir: string;
   templateFilename: string;
+  includeTest?: boolean;
 }): Promise<void> {
   const templatePath = join(
     dirname(fileURLToPath(import.meta.url)),
@@ -103,6 +105,11 @@ const SRC_DIR: Record<string, string> = {
   APP: "app",
   V1_ADDON: "addon",
   V2_ADDON: "src",
+};
+const TEST_DIR: Record<string, string> = {
+  APP: "tests",
+  V1_ADDON: "tests",
+  V2_ADDON: "test",
 };
 
 export async function generateFilePath(

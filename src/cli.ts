@@ -41,6 +41,10 @@ yargs(hideBin(process.argv))
           alias: ["ts"],
           description: "Generate a `.gts` component",
           type: "boolean",
+        })
+        .option("include-test", {
+          description: "Include a test file for the component",
+          type: "boolean",
         });
     },
     handler(options) {

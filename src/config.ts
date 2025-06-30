@@ -9,6 +9,7 @@ export type Config = {
       classBased?: boolean;
       path?: string;
       typescript?: boolean;
+      includeTest?: boolean;
     };
     helper?: {
       classBased?: boolean;
